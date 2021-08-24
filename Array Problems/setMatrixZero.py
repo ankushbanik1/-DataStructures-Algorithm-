@@ -17,3 +17,5 @@ class Solution:
         for each in col:
             for i in range(len(matrix)):
                 matrix[i][each] = 0
+
+                
