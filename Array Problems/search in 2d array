@@ -1,0 +1,21 @@
+class Solution(object):
+    def searchMatrix(self, matrix, target):
+        """
+        :type matrix: List[List[int]]
+        :type target: int
+        :rtype: bool
+        """
+        
+        if target < matrix[0][0] or target > matrix[-1][-1]:
+            return False
+        n = len(matrix[0])
+        bot, mid, top = 0, 0, (n*len(matrix)) - 1
+        while bot <= top:
+            mid = (bot + top) // 2
+            if target == matrix[mid//n][mid%n]:
+                return True
+            elif target > matrix[mid//n][mid%n]:
+                bot = mid + 1
+            else:
+                top = mid - 1
+        return False
