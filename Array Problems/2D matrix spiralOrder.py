@@ -41,3 +41,6 @@ class Solution:
 					cnt += 1
 			minc += 1
 		return ans
+	
+	
+	#
